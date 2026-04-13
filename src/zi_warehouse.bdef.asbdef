@@ -1,0 +1,33 @@
+unmanaged implementation in class ZBP_I_WAREHOUSE unique;
+with draft;
+
+define behavior for ZI_WAREHOUSE alias Warehouse
+draft table zwarehouse_d
+lock master total etag ChangedAt
+{
+  field ( readonly ) WarehouseId, CreatedBy, CreatedAt, ChangedAt;
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zwarehouse
+  {
+    WarehouseId   = warehouse_id;
+    WarehouseName = warehouse_name;
+    Location      = location;
+    Capacity      = capacity;
+    UsedCapacity  = used_capacity;
+    ManagerId     = manager_id;
+    Status        = status;
+    CreatedBy     = created_by;
+    CreatedAt     = created_at;
+    ChangedAt     = changed_at;
+  }
+}

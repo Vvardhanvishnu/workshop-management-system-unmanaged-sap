@@ -1,0 +1,10 @@
+CLASS zbp_i_warehouse DEFINITION
+  PUBLIC
+  ABSTRACT
+  FINAL
+  FOR BEHAVIOR OF zi_warehouse.
+
+ENDCLASS.
+
+CLASS zbp_i_warehouse IMPLEMENTATION.
+ENDCLASS.

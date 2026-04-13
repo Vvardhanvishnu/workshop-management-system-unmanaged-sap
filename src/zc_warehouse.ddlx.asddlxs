@@ -1,0 +1,120 @@
+//@Metadata.layer: #CORE
+//
+//@UI.headerInfo: {
+//  typeName: 'Warehouse',
+//  typeNamePlural: 'Warehouses',
+//  title: { type: #STANDARD, value: 'WarehouseName' },
+//  description: { type: #STANDARD, value: 'WarehouseId' }
+//}
+//
+//annotate view ZC_WAREHOUSE with
+//{
+//  @UI.facet: [{
+//    id: 'Warehouse',
+//    purpose: #STANDARD,
+//    type: #IDENTIFICATION_REFERENCE,
+//    label: 'Warehouse Details',
+//    position: 10
+//  }]
+//
+//  @UI.lineItem: [{ position: 10 }]
+//  @UI.identification: [{ position: 10 }]
+//  @UI.selectionField: [{ position: 10 }]
+//  WarehouseId;
+//
+//  @UI.lineItem: [{ position: 20 }]
+//  @UI.identification: [{ position: 20 }]
+//  @UI.selectionField: [{ position: 20 }]
+//  WarehouseName;
+//
+//  @UI.lineItem: [{ position: 30 }]
+//  @UI.identification: [{ position: 30 }]
+//  Location;
+//
+//  @UI.lineItem: [{ position: 40 }]
+//  @UI.identification: [{ position: 40 }]
+//  Capacity;
+//
+//  @UI.lineItem: [{ position: 50 }]
+//  @UI.identification: [{ position: 50 }]
+//  UsedCapacity;
+//
+//  @UI.lineItem: [{ position: 60 }]
+//  @UI.identification: [{ position: 60 }]
+//  ManagerId;
+//
+//  @UI.lineItem: [{ position: 70 }]
+//  @UI.identification: [{ position: 70 }]
+//  @UI.selectionField: [{ position: 30 }]
+//  Status;
+//
+//  @UI.identification: [{ position: 80 }]
+//  CreatedBy;
+//
+//  @UI.identification: [{ position: 90 }]
+//  CreatedAt;
+//
+//  @UI.identification: [{ position: 100 }]
+//  ChangedAt;
+//}
+
+
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+  typeName: 'Warehouse',
+  typeNamePlural: 'Warehouses',
+  title: { type: #STANDARD, value: 'WarehouseName' },
+  description: { type: #STANDARD, value: 'WarehouseId' }
+}
+
+annotate view ZC_WAREHOUSE with
+{
+  @UI.facet: [{
+    id: 'Warehouse',
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'Warehouse Details',
+    position: 10
+  }]
+
+  @UI.lineItem: [{ position: 10, label: 'Warehouse ID' }]
+  @UI.identification: [{ position: 10, label: 'Warehouse ID' }]
+  @UI.selectionField: [{ position: 10 }]
+  WarehouseId;
+
+  @UI.lineItem: [{ position: 20, label: 'Warehouse Name' }]
+  @UI.identification: [{ position: 20, label: 'Warehouse Name' }]
+  @UI.selectionField: [{ position: 20 }]
+  WarehouseName;
+
+  @UI.lineItem: [{ position: 30, label: 'Location' }]
+  @UI.identification: [{ position: 30, label: 'Location' }]
+  Location;
+
+  @UI.lineItem: [{ position: 40, label: 'Capacity' }]
+  @UI.identification: [{ position: 40, label: 'Capacity' }]
+  Capacity;
+
+  @UI.lineItem: [{ position: 50, label: 'Used Capacity' }]
+  @UI.identification: [{ position: 50, label: 'Used Capacity' }]
+  UsedCapacity;
+
+  @UI.lineItem: [{ position: 60, label: 'Manager ID' }]
+  @UI.identification: [{ position: 60, label: 'Manager ID' }]
+  ManagerId;
+
+  @UI.lineItem: [{ position: 70, label: 'Status' }]
+  @UI.identification: [{ position: 70, label: 'Status' }]
+  @UI.selectionField: [{ position: 30 }]
+  Status;
+
+  @UI.identification: [{ position: 80, label: 'Created By' }]
+  CreatedBy;
+
+  @UI.identification: [{ position: 90, label: 'Created At' }]
+  CreatedAt;
+
+  @UI.identification: [{ position: 100, label: 'Changed At' }]
+  ChangedAt;
+}

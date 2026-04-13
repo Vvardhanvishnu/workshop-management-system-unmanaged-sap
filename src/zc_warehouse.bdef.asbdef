@@ -1,0 +1,15 @@
+projection;
+use draft;
+
+define behavior for ZC_WAREHOUSE alias Warehouse
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+}
